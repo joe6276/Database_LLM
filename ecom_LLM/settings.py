@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "ecom_LLM"
+    "ecom_LLM",
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -48,7 +49,15 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:1776'
+  
+]
+
 
 ROOT_URLCONF = "ecom_LLM.urls"
 
@@ -80,6 +89,8 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+CORS_ALLOW_CREDENTIALS = True
 
 
 # Password validation

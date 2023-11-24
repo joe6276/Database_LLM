@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('add_ten/<str:question>/', views.add_ten, name='add_ten'),
+    path('prompt/<str:question>/', views.add_ten, name='add_ten'),
 ]

@@ -6,7 +6,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.agents.agent_types import AgentType
 def add_ten(request, question):
     try:
-        KEY ="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"
+        KEY =""
         # postgresql+psycopg2://postgres:root@localhost:5432/Skol
         # pip install -r requirement.txt
         #connect to DB
